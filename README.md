@@ -1,66 +1,51 @@
 # SpringBoot-Humidity-Tracking-MQTT-Api
-# Uzaktan Yönetim ve Veri Gözlemleme Projesi
+# Remote Management and Data Observation Project
 
-Bu proje, Arduino cihazları ile iletişim kurarak çeşitli verileri gözlemlemek ve cihazları uzaktan yönetmek amacı taşımaktadır. Proje, MQTT protokolü kullanarak cihazlarla haberleşmektedir ve Spring Framework ile geliştirilen bir API üzerinden yönetilmektedir. Projede aynı zamanda nemlendirme ve verimlilik izleme özellikleri de bulunmaktadır.
+This project aims to observe various data and remotely manage devices by communicating with Arduino devices. The project communicates with devices using the MQTT protocol and is managed through an API developed with the Spring Framework. Additionally, the project includes humidity control and efficiency monitoring features.
 
-## Özellikler
+## Features
 
-- **Uzaktan Yönetim**: Arduino cihazlarıyla MQTT üzerinden iletişim kurarak uzaktan yönetim imkanı.
-- **Veri Gözlemleme**: Cihazlardan gelen verileri gözlemleme ve analiz etme.
-- **Nemlendirme**: Ortamın nem durumunu kontrol etme ve gerekirse nemlendirme işlemi yapma.
-- **Verimlilik İzleme**: Sistem üzerinden verimliliği izleme ve raporlama.
+- **Remote Management**: Ability to remotely manage Arduino devices through communication over MQTT.
+- **Data Observation**: Observe and analyze data received from devices.
+- **Humidity Control**: Control the humidity level of the environment and perform humidification if necessary.
+- **Efficiency Monitoring**: Monitor and report efficiency through the system.
 
-## Teknolojiler
+## Technologies
 
-- **Spring Boot**: API geliştirme.
-- **MQTT**: Cihazlarla haberleşme protokolü.
-- **Amazon Web Services (AWS)**: Uygulamanın deploy edildiği sunucu.
+- **Spring Boot**: For API development.
+- **MQTT**: Communication protocol with devices.
+- **Amazon Web Services (AWS)**: Server where the application is deployed.
 
-## Kurulum
-
-1. Projeyi klonlayın:
-2.  [git clone](https://github.com/farukaydogan/SPRING-BOOT-WATERING-AND-MANAGMENT-API.git)
-
-markdown
-Copy code
-2. Gerekli bağımlılıkları yükleyin:
+## Installation
+Install the required dependencies:
 mvn install
-
-markdown
-Copy code
-3. Uygulamayı çalıştırın:
+Run the application:
 mvn spring-boot:run
 
-markdown
-Copy code
+API Usage
+You can perform various operations through the API. Below are some examples:
 
-## API Kullanımı
+Get Device Status
+GET /api/devices/{deviceId}
 
-API üzerinden çeşitli işlemler yapabilirsiniz. Aşağıda bazı örnekler bulunmaktadır:
+This endpoint retrieves the status of the device with the specified ID.
 
-### Cihaz Durumu Getirme
+Update Device
+PUT /api/devices/{deviceId}
 
-`GET /api/devices/{deviceId}`
+This endpoint updates the status of the device with the specified ID.
 
-Bu endpoint, belirtilen ID'ye sahip cihazın durumunu getirir.
+License
+This project is licensed under the MIT License. For more information, please see the LICENSE file.
 
-### Cihazı Güncelleme
-
-`PUT /api/devices/{deviceId}`
-
-Bu endpoint, belirtilen ID'ye sahip cihazın durumunu güncellemeye yarar.
-
-## Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakınız.
-
-## İletişim
-
-Herhangi bir sorunuz veya öneriniz varsa, lütfen [issues](https://github.com/farukaydogan/SPRING-BOOT-WATERING-AND-MANAGMENT-API/issues) sayfasını kullanarak bize ulaşın.
+Contact
+If you have any questions or suggestions, please contact us through the issues page.
 
 
 
-It is an API written to determine the moisture content of the crops.
+1. Clone the project:
+   ```bash
+   git clone https://github.com/farukaydogan/SPRING-BOOT-WATERING-AND-MANAGMENT-API.git
 
 <img width="1118" alt="Screenshot 2023-10-28 at 02 00 13" src="https://github.com/farukaydogan/ARGE-WATERING/assets/57232389/f5a1ca67-a4af-4ff2-b5b8-f4681f595d26">
 <img width="1135" alt="Screenshot 2023-10-28 at 02 00 27" src="https://github.com/farukaydogan/ARGE-WATERING/assets/57232389/6c315655-e005-4356-8933-28e615532130">
